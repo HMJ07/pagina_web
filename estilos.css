@@ -869,5 +869,8 @@ footer .arriba:hover{
     .contacto .fila .columna{
         width: 100%;
     }
-   
+    
+    .contacto .info{
+        display: none;
+    }
 }
