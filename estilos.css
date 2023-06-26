@@ -84,11 +84,7 @@ html{
     border-radius: 100%;
 }
 
-.inicio .contenido-banner img:hover{
-    width: 81%;
-    transition: .4s;
-    
-}
+
 
 .inicio .contenido-banner h1{
     margin-top: 40px;
