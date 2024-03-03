@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CARLIS & HUGUIS</title>
+  <link rel="icon" href="image.jpg">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: coral ;
+    }
+    header {
+      background-color: pink;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+      align-items: center;
+    }
+    nav {
+      background-color: palevioletred;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0 15px;
+    }
+    nav a:hover {
+      background-color: #880cdb;
+    }
+    section {
+      padding: 20px;
+    }
+
+    .fotos{
+        width: 200px;
+        height: 340px;
+        margin: 15px;
+        padding: 2px;
+    }
+
+    .carpeta{
+      display: flex;
+      text-align: center;
+      align-items: center;
+      padding: 30px;
+      margin-left: 38%;
+    }
+
+    button{
+      display: flex;
+      text-align: center;
+      align-items: center;
+      padding: 30px;
+      margin-left: 44%;
+      background-color: rgb(224, 20, 197);
+      border-radius: 20%;
+      border-color: blueviolet;
+      border-width: 20px;
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .video{
+
+      width: 100%;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      padding-top: 15px;
+      height: 0;
+      overflow: hidden;
+    }
+    .video-container iframe, .video-container object, .video-container embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        padding: 10px 0;
+      }
+      
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><b>Nuestra página web jijiji</b></h1>
+  </header>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#videos">Videito</a>
+    <a href="#fotos">Fotitos</a>
+    <a href="#drive">CARPETITA</a>
+  </nav>
+  <section id="inicio">
+    <h2>No sé que poner pero te quiero</h2>
+    <p>estoy muy agradecida por tener esta versión de ti y verte crecer a mi lado y espero que poco a poco todo lo que piensas que no es para ti digas joder que tonto estaba</p>
+  </section>
+  <section id="videos">
+    <h2>Videos</h2>
+    <div class="video-container">
+        <video autoplay controls class="video">
+          <source src="videito.mp4" type="video/mp4">
+        </video>
+    </div>
+  </section>
+  <section  id="fotos">
+    <h2>Fotitos</h2>
+    
+    <img class="fotos" src="image.jpg" alt="Foto de ejemplo">
+    <img class="fotos" src="100_1642.JPG" alt="">
+    <img class="fotos" src="100_1647[1].JPG" alt="">
+    <img class="fotos" src="100_1629[1].JPG" alt="">
+    <img class="fotos" src="100_1660[1].JPG" alt="">
+    <img class="fotos" src="100_1666[1].JPG" alt="">
+    <img class="fotos" src="100_1677[1].JPG" alt="">
+    
+  </section>
+
+  <section id="drive">
+    <h2 class="carpeta">LINK DE NUESTRA CARPETITA</h2>
+    <div class="wrapper">
+      <button>
+        <a href="https://drive.google.com/drive/folders/1hqZmsKQd-sU2-m3tvszCrBQr5gOKVC8M">CARPETITA</a>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>    
+  </section>
+  <script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        window.scrollTo({
+          top: targetSection.offsetTop,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
